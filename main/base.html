@@ -1,0 +1,49 @@
+{% load static %}
+
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+        <style>
+            aside main h6 {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                text-decoration: none
+            }
+        </style>
+    </head>
+<body>
+    <aside>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fab fa-angellist"></i> Главная</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-align-justify"></i> Информация</li></a>
+            <a href="{% url 'create' %}"><li><i class="fas fa-angle-double-right"></i> Создание новостей</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="far fa-newspaper"></i> Новости</li></a>
+            <a href="{% url 'login' %}"><li>Вход</li></a>
+            <a href="{% url 'signup' %}"><li>Регистрация</li></a>
+            <main>
+                {% if user.is_authenticated %}
+                <h6>Добро пожаловать, {{ user.username }}!</h6>
+                <a href="{% url 'logout' %}">Выйти</a>
+                {% else %}
+                <h6>Вы не в системе</h6>
+                <a href="{% url 'login' %}">Войти</a>
+                {% endif %}
+            </main>
+        </ul>
+    </aside>
+
+
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Информация
+{% endblock %}
+
+{% block content %}
+
+<html>
+    <head>
+        <style type="text/css">
+       h1 {
+            position: relative;
+            left: 250px;
+            color: #66FCF1;
+        }
+        h4 {
+            position: relative;
+            left: 50px;
+            top: 50px;
+            color: #C5C6C7;
+        }
+        h6 {
+           position: relative;
+           left: 50px;
+           top: 50px;
+           margin-top: 30px;
+           text-decoration: underline;
+           color: #C5C6C7;
+        }
+        body p {
+            position: relative;
+            top: 50px;
+            left: 50px;
+            border-right: 5px solid;
+            color: #C5C6C7;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Полезные ссылки для программирования</h1>
+        <h6>Руководство по Python</h6>
+        <p><a href="https://www.python.org/">Python.org</a> - Оффициальный установщик Python</p>
+        <p><a href="https://metanit.com/python/tutorial/">METANIT.COM</a> - Все основы языка Python</p>
+        <p><a href="https://pypi.org/project/pip/">PyPI</a> - Хранилище ПО для Python</p>
+        <p><a href="https://digital2.ru/zametki-python-18-setevoe-programmirovanie/">DIGITAL 2.0</a> - Полезные статьи и заметки по Python</p>
+        <h6>Фреймворк Django</h6>
+        <p><a href="https://www.djangoproject.com/">Django</a> - Оффициальный сайт Django</p>
+        <h6>HTML и CSS</h6>
+        <p><a href="http://htmlbook.ru/html">htmlbook.ru</a> - Справочник по HTML</p>
+        <p><a href="https://webref.ru/css">WebRefernce</a> - Справочник по CSS</p>
+</html>
+
+{% endblock %}
+
+
