@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: ls ${{ github.main }}
+      - run: ls ${{ github.base.html }}
