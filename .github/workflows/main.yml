@@ -2,7 +2,7 @@
 
 name: My-First-Action
 env:
-  PACKAGE_NAME: "HTML-${{ 8a2c2e4bfcd64e5409187a595749616f274196d2 }}"
+  PACKAGE_NAME: "HTML-${{ github.sha }}"
 
 on: [push]
 jobs:
