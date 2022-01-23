@@ -9,4 +9,4 @@ jobs:
     steps: 
     - name: html file
       run:
-        ls ${{main.base.html}}
+        ls ${{ github.workspace }}
