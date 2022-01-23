@@ -7,9 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Check out repository code
-      uses: main/base.html/checkout@v2
-    - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-    - name: html file
-      run:
-        ls ${{ github.workspace }}
+    - name: Check out repository code 
+    - run: echo "💡 The ${{ https://github.com/WEBDNik/First_website/commit/8a2c2e4bfcd64e5409187a595749616f274196d2 }} repository has been cloned to the runner."
