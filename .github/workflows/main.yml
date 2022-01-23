@@ -1,8 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
 name: My-First-Action
-env:
-  PACKAGE_NAME: "HTML-${{ github.sha }}"
+
 
 on: [push]
 jobs:
@@ -10,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Check out repository code 
-      run: echo "💡 The ${{ env.PACKAGE_NAME }} repository has been cloned to the runner."
+      - run: ls ${{ base.html }}
