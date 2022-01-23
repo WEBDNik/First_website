@@ -1,6 +1,9 @@
 # This is a basic workflow to help you get started with Actions
 
 name: My-First-Action
+env:
+  PACKAGE_NAME: "HTML-${{ 8a2c2e4bfcd64e5409187a595749616f274196d2 }}"
+
 on: [push]
 jobs:
   build:
@@ -8,4 +11,4 @@ jobs:
     
     steps:
     - name: Check out repository code 
-      run: echo "💡 The ${{ https://github.com/WEBDNik/First_website/commit/8a2c2e4bfcd64e5409187a595749616f274196d2 }} repository has been cloned to the runner."
+      run: echo "💡 The ${{ env.PACKAGE_NAME }} repository has been cloned to the runner."
